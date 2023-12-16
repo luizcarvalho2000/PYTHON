@@ -3,9 +3,9 @@ from tkinter import ttk
 
 ##### Cores #####
 
-co0 = "#444466" # Preta
-co1 = "#feffff" # Branca
-co2 = "#4065a1" # Vermelha
+co0 = "#444466" # Preto
+co1 = "#feffff" # Branco
+co2 = "#4065a1" # Vermelho
 
 janela = Tk()
 janela.title("Calculadora de IMC")
@@ -52,7 +52,7 @@ l_resultado.place(x=175, y=85)
 l_resultado_texto = Label(frame_baixo, width=37, text="", height=1, padx=0, pady=12, relief="flat", anchor="center", font=('Ivy 10 bold'), bg=co1, fg=co0)
 l_resultado_texto.place(x=0, y=85)
 
-# --------------- Botao calcular --------------- #
+# --------------- Definindo Funções --------------- #
 
 
 
@@ -78,6 +78,8 @@ def calcular():
         l_resultado_texto["text"] = "Erro!"
 
     l_resultado["text"] = "{:.2f}".format(resultado)
+
+# --------------- Botão Calcular --------------- #
 
 b_calcular = Button(frame_baixo, text="Calcular", width=34, height=1, overrelief=SOLID, bg=co2, fg="white", font=('Ivy 10 bold'), anchor="center", relief=RAISED, command=calcular)
 b_calcular.place(x=0, y=150)
